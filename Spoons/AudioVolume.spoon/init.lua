@@ -16,7 +16,7 @@ obj.license = "MIT - https://opensource.org/licenses/MIT"
 local audio = require("hs.audiodevice")
 
 -- Function to handle audio device changes
-function obj:audioDeviceChanged(event)
+local function audioDeviceChanged(event)
     if event == "dOut" then
         local device = audio.defaultOutputDevice()
         if device then
@@ -40,12 +40,8 @@ function obj:init()
 end
 
 function obj:start()
-    -- Define a wrapper for the callback function to preserve the context of `self`
-    local callback = function(event)
-        self:audioDeviceChanged(event)
-    end
     -- Watch for audio device changes
-    audio.watcher.setCallback(callback)
+    audio.watcher.setCallback(audioDeviceChanged)
     audio.watcher.start()
 end
 
