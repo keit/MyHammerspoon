@@ -13,7 +13,9 @@ obj.author = "Kei Takashima <takashima.kei@gmail.com>"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 local rules = {
-    ["Transcribe!"] = "Scarlett 2i2 4th Gen"
+    ["Transcribe!"] = "Scarlett 2i2 4th Gen",
+    ["iReal Pro"] = "Scarlett 2i2 4th Gen",
+    ["Music"] = "Scarlett 2i2 4th Gen"
 }
 
 local function setOutputDevice(deviceName)
