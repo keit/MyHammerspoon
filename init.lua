@@ -6,3 +6,6 @@ spoon.InputSource:start()
 
 hs.loadSpoon("AudioOutputSwitcher")
 spoon.AudioOutputSwitcher:start()
+
+hs.loadSpoon("iPodcastAutoLaunch")
+spoon.iPodcastAutoLaunch:start()
